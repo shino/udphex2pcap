@@ -11,7 +11,7 @@ http://wiki.wireshark.org/Development/LibpcapFileFormat
 Usage
 =====
 
-Read hexdump packet data from STDIN, write pcap format to STDOUT.
+Read hex dump packet data from STDIN, write pcap format to STDOUT.
 
 ::
 
@@ -20,14 +20,14 @@ Read hexdump packet data from STDIN, write pcap format to STDOUT.
 Input file should be of comma-separated format,
 with column order as follows:
 
-#. Date and time, ISO 8601 with 6 digits microsec,
+#. Date and time, ISO 8601 with 6 digits microsecond,
    ``2011-08-26T12:48:52.904486`` for example
-#. Ignored (Maybe hostname comes here)
+#. Ignored (Maybe host name comes here)
 #. Ignored (Maybe process ID comes here)
 #. Source IP address
 #. Source UDP port
-#. Distination IP address
-#. Distination UDP port
+#. Destination IP address
+#. Destination UDP port
 #. Hex dump string of UDP payload
 
 See ``sample_input.txt`` for example.
@@ -37,17 +37,17 @@ API
 
 If your input data is not as above format,
 you can use the ``packet`` function directly,
-after `require 'udpdump_to_pcap'`.
+after ``require 'udpdump_to_pcap'``.
 
 The arguments are as follows:
 
 #. Output stream
-#. Date and time, ISO 8601 with 6 digits microsec,
+#. Date and time, ISO 8601 with 6 digits microsecond,
    ``2011-08-26T12:48:52.904486`` for example
 #. Source IP address
 #. Source UDP port
-#. Distination IP address
-#. Distination UDP port
+#. Destination IP address
+#. Destination UDP port
 #. Hex dump string of UDP payload
 
 See ``debug_main()`` in ``udpdump_to_pcap.rb`` for example.
@@ -56,9 +56,9 @@ Some notes
 ==========
 
 #. I try this script only at little-endian environments.
-   There may be bugs on big-endiean environments or cross environments.
+   There may be bugs on big-endian environments or cross environments.
 
-#. UDP checksum is NOT calculated (jus ZEROs).
+#. UDP checksum is NOT calculated (just Zeros).
    If you use viewer software such as Wireshark,
    I recommend disabling checksum validation.
 
