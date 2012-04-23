@@ -13,9 +13,13 @@ Usage
 
 Read hex dump packet data from STDIN, write pcap format to STDOUT.
 
-::
+Ruby version::
 
    $ ./udpdump_to_pcap.rb < hexdump.txt > out.pcap
+
+Python version::
+
+   $ ./udpdump_to_pcap.py < hexdump.txt > out.pcap
 
 Input file should be of comma-separated format,
 with column order as follows:
@@ -35,7 +39,10 @@ See ``sample_input.txt`` for example.
 API
 ===
 
-If your input data is not as above format,
+Ruby
+----
+
+If your input data is not as above file format,
 you can use the ``packet`` function directly,
 after ``require 'udpdump_to_pcap'``.
 
@@ -51,6 +58,23 @@ The arguments are as follows:
 #. Hex dump string of UDP payload
 
 See ``debug_main()`` in ``udpdump_to_pcap.rb`` for example.
+
+Python
+------
+
+If your input data is not as above file format,
+you can use the ``packet`` function directly,
+after ``import udpdump_to_pcap``.
+
+The arguments are as follows:
+
+#. Date and time, ISO 8601 with 6 digits microsecond,
+   ``2011-08-26T12:48:52.904486`` for example
+#. Source IP address
+#. Source UDP port
+#. Destination IP address
+#. Destination UDP port
+#. Hex dump string of UDP payload
 
 Some notes
 ==========
@@ -75,6 +99,7 @@ Copyright
 =========
 
 Copyright 2012 by Shunichi Shinohara.
+Copyright 2012 by Shoji KUMAGAI. (Python version)
 
 License
 =======
