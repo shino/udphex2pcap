@@ -98,8 +98,8 @@ Some notes
 Copyright
 =========
 
-Copyright 2012 by Shunichi Shinohara.
-Copyright 2012 by Shoji KUMAGAI. (Python version)
+- Copyright 2012 by Shunichi Shinohara.
+- Copyright 2012 by Shoji KUMAGAI (Python version).
 
 License
 =======
